@@ -73,7 +73,8 @@ class BookController extends Controller
      */
     public function edit(Book $book)
     {
-        //
+        $book = Book::find($book->id);
+        return view('books.edit', compact('book'));
     }
 
     /**
@@ -85,7 +86,20 @@ class BookController extends Controller
      */
     public function update(Request $request, Book $book)
     {
-        //
+        $valid =$request->validate([
+            'name'=>['required','string','max:255','min:3'],
+            'writer'=>['required','string','max:255','min:3'],
+            'publication'=>['required','string','max:255','min:3'],
+            'published'=>['required'],
+            'image'=>['required','image','max:2048']
+        ]);
+
+        if ($request->hasFile('image'))
+        $valid['image']=$request->file('image')->store('BookImage','public');
+
+
+        $book->update($valid);
+        return redirect(route('books.index'));
     }
 
     /**
@@ -96,6 +110,8 @@ class BookController extends Controller
      */
     public function destroy(Book $book)
     {
-        //
+        $book = Book::find($book->id);
+        $book->delete();
+        return back();
     }
 }
