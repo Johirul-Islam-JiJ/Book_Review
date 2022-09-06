@@ -110,6 +110,8 @@ class BookController extends Controller
      */
     public function destroy(Book $book)
     {
-        //
+        $book = Book::find($book->id);
+        $book->delete();
+        return back();
     }
 }
