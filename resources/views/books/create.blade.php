@@ -2,14 +2,6 @@
 
 @section('content')
 
-    {{-- <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header">Book List
-                        <a class="btn btn-success btn-sm float:right " href="{{ route('books.index') }}">Back</a>
-                    </div> --}}
-
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6">

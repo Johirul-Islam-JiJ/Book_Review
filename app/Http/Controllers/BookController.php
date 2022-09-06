@@ -87,11 +87,11 @@ class BookController extends Controller
     public function update(Request $request, Book $book)
     {
         $valid =$request->validate([
-            'name'=>['required','string','max:255','min:3'],
+            'name'=>['required','string','max:255','min:2'],
             'writer'=>['required','string','max:255','min:3'],
             'publication'=>['required','string','max:255','min:3'],
             'published'=>['required'],
-            'image'=>['required','image','max:2048']
+            'image'=>['required','image','max:4088']
         ]);
 
         if ($request->hasFile('image'))
