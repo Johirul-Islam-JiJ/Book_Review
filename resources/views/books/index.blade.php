@@ -34,7 +34,7 @@
                             </td>
                             <td>{{ $book->published }}</td>
                             <td>
-                                <a href="">Edit</a>
+                                <a href="{{ route('books.edit', $book->id) }}">Edit</a>
                                 <a href="" class="text-danger">Delete</a>
                             </td>
                           </tr>
