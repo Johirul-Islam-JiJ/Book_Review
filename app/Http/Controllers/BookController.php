@@ -112,6 +112,7 @@ class BookController extends Controller
     {
         $book = Book::find($book->id);
         $book->delete();
-        return back();
+        return back()->with('staus','Book Deleted Successfully!!!');
+
     }
 }
