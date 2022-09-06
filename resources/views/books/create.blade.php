@@ -6,7 +6,7 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-header">Book List
-                        <a class="btn btn-success btn-sm " href="{{ route('books.index') }}">Back</a>
+                        <a class="btn btn-success btn-sm float:right " href="{{ route('books.index') }}">Back</a>
                     </div>
 
 
@@ -31,6 +31,7 @@
                                 <label for="name">Name</label>
                                 <input type="text" class="form-control mb-3" id="name" name="name"
                                     placeholder="Enter Book Name">
+
                             </div>
 
                             <div class="form-group">
