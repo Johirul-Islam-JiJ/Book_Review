@@ -25,7 +25,7 @@
                           @foreach ($books as $book)
 
                           <tr>
-                            <td>{{ $book->loop+1 }}</td>
+                            <td>{{ $loop->iteration}}</td>
                             <td>{{ $book->name }}</td>
                             <td>{{ $book->writer }}</td>
                             <td>{{ $book->publication }}</td>
