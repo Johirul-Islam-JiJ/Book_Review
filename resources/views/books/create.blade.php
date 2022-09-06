@@ -13,7 +13,7 @@
                     <div class="card-body">
 
 
-                        <form method="POST" action="{{ route('books.store') }}">
+                        <form method="POST" action="{{ route('books.store') }}" enctype="multipart/form-data">
                             @csrf
 
 
@@ -46,9 +46,16 @@
                             </div>
 
                             <div class="form-group">
+<<<<<<< HEAD
                                 <label for="publication">Image</label>
                                 <input type="file" class="form-control mb-3" id="image" name="image">
                             </div>
+=======
+                                <label for="image">Image</label>
+                                <input type="file" class="form-control mb-3" id="image" name="image">
+                            </div>
+
+>>>>>>> 0f0ec48935cf269d50e16f38d7edd0444d80c157
                             <div class="form-group">
                                 <label for="published">Published On</label>
                                 <input type="date" class="form-control mb-3" id="published" name="published"
