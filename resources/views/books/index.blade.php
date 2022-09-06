@@ -29,13 +29,9 @@
                             <td>{{ $book->name }}</td>
                             <td>{{ $book->writer }}</td>
                             <td>{{ $book->publication }}</td>
-<<<<<<< HEAD
-                            <td>{{ $book->image }}</td>
-=======
                             <td>
                                 <img src={{"$book->image"}} class="img-fluid" height="80px" width="80px" alt="">
                             </td>
->>>>>>> 0f0ec48935cf269d50e16f38d7edd0444d80c157
                             <td>{{ $book->published }}</td>
                             <td>
                                 <a href="">Edit</a>
