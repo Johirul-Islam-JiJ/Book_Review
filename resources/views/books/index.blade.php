@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">Book List</div>
 
@@ -16,6 +16,7 @@
                             <th scope="col">Book Name</th>
                             <th scope="col">Writer</th>
                             <th scope="col">Publications</th>
+                            <th scope="col">Image</th>
                             <th scope="col">Published At</th>
                           </tr>
                         </thead>
@@ -27,6 +28,7 @@
                             <td>{{ $book->name }}</td>
                             <td>{{ $book->writer }}</td>
                             <td>{{ $book->publication }}</td>
+                            <td>{{ $book->image }}</td>
                             <td>{{ $book->published }}</td>
                           </tr>
 

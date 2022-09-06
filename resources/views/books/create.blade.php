@@ -46,6 +46,10 @@
                             </div>
 
                             <div class="form-group">
+                                <label for="publication">Image</label>
+                                <input type="file" class="form-control mb-3" id="image" name="image">
+                            </div>
+                            <div class="form-group">
                                 <label for="published">Published On</label>
                                 <input type="date" class="form-control mb-3" id="published" name="published"
                                     placeholder="Published Date">
