@@ -18,7 +18,7 @@
           <a class="nav-link " href="{{ route('categories.index') }}">Category</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link " href="#">SubCategory</a>
+            <a class="nav-link " href="{{ route('sub-categories.index') }}">SubCategory</a>
           </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
