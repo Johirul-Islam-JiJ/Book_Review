@@ -17,13 +17,17 @@ class DivisionController extends Controller
 
     public function create()
     {
-        //
+        return view('divisions.form');
     }
 
 
     public function store(Request $request)
     {
-        //
+        $valid = $request->validate([
+            'name' => ['required','string','max:255','min:3'],
+        ]);
+        if (division::create($valid))
+        return redirect()->route('divisions.index');
     }
 
 
