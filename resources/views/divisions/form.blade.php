@@ -18,7 +18,7 @@
                     <div class="card-body">
 
                         @if (isset($division))
-                            <form method="POST" action="{{ route('divisions.update', $divisions->id) }}"
+                            <form method="POST" action="{{ route('divisions.update', $division->id) }}"
                                 enctype="multipart/form-data">
                                 @csrf
                                 @method('PUT')

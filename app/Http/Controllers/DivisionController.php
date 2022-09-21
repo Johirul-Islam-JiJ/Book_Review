@@ -39,18 +39,23 @@ class DivisionController extends Controller
 
     public function edit(Division $division)
     {
-        //
+        return view('divisions.form', compact('division'));
     }
 
 
     public function update(Request $request, Division $division)
     {
-        //
+        $valid = $request->validate([
+            'name' => ['required','string','max:255','min:3'],
+        ]);
+        if($division->update($valid))
+            return redirect()->route('divisions.index');
     }
 
 
     public function destroy(Division $division)
     {
-        //
+        if($division->delete())
+        return redirect()->route('divisions.index');
     }
 }
