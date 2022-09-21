@@ -41,7 +41,7 @@ class BookController extends Controller
             'writer'=>['required','string','max:255','min:3'],
             'publication'=>['required','string','max:255','min:3'],
             'published'=>['required'],
-            'image'=>['required','image','max:2048']
+            'image'=>['required','image','max:8192']
         ]);
 
         if ($request->hasFile('image'))
