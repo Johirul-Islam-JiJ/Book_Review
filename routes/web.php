@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\DistrictController;
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\ReviewerController;
 use App\Http\Controllers\SubCategoryController;
@@ -26,4 +27,7 @@ Route::resource('sub-categories',SubCategoryController::class)
     ->parameters(['sub-categories' => 'subCategory']);
 
 Route::resource('divisions',DivisionController::class)
+    ->except('show');
+
+Route::resource('districts',DistrictController::class)
     ->except('show');
