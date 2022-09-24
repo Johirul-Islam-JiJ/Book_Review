@@ -20,13 +20,15 @@ class DistrictController extends Controller
 
     public function create()
     {
-        $districts = Division::orderBy('name', 'asc')->get();
-        return view('districts.form', compact('districts'));
+
+        $divisions = Division::orderBy('name', 'asc')->get();
+            return view('districts.form', compact('divisions'));
     }
 
 
     public function store(Request $request)
     {
+
         $valid = $request->validate([
             'name' =>['required','string','max:255','min:3'],
             'division_id' =>['required']
@@ -57,6 +59,7 @@ class DistrictController extends Controller
 
     public function destroy(District $district)
     {
-        //
+        if($district->delete())
+            return redirect()->route('districts.index');
     }
 }

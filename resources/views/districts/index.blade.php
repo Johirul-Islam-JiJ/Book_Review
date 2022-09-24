@@ -14,6 +14,7 @@
                             <tr>
                                 <th scope="col">S.I</th>
                                 <th scope="col">District Name</th>
+                                <th scope="col">Division</th>
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
@@ -22,6 +23,7 @@
                             <tr>
                                 <td>{{ $loop->iteration}}</td>
                                 <td>{{ $district->name }}</td>
+                                <td>{{ $district->division_id }}</td>
                                 <td>
                                     <a href="{{ route('districts.edit', $district->id) }}">Edit</a>
 
