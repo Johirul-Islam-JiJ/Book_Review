@@ -47,13 +47,20 @@ class DistrictController extends Controller
 
     public function edit(District $district)
     {
-        //
+        $divisions = Division::orderBy('name', 'asc')->get();
+        return view('districts.form', compact('district','divisions' ));
     }
 
 
     public function update(Request $request, District $district)
     {
-        //
+        $valid = $request->validate([
+            'name' =>['required','string','max:255','min:3'],
+            'division_id' =>['required']
+        ]);
+
+        if($district->update($valid))
+            return redirect()->route('districts.index');
     }
 
 

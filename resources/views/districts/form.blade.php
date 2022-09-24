@@ -41,7 +41,7 @@
                             <div class="form-group">
                                 <label for="name">Name</label>
                                 <input type="text" class="form-control mb-3" id="name" name="name"
-                                    value="{{ $districts->name }}">
+                                    value="{{ $district->name }}">
                             </div>
                         @else
                             <div class="form-group">
