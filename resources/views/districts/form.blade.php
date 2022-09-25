@@ -7,7 +7,7 @@
                 <div class="card">
 
                     <div class="card-header">
-                        @if (isset($districts))
+                        @if (isset($district))
                             Update District
                         @else
                             Create District
@@ -16,8 +16,8 @@
                     </div>
                     <div class="card-body">
 
-                        @if (isset($districts))
-                            <form method="POST" action="{{ route('districts.update', $districts->id) }}"
+                        @if (isset($district))
+                            <form method="POST" action="{{ route('districts.update', $district->id) }}"
                                 enctype="multipart/form-data">
                                 @csrf
                                 @method('PUT')
@@ -37,7 +37,7 @@
                             </div>
                         @endif
 
-                        @if (isset($districts))
+                        @if (isset($district))
                             <div class="form-group">
                                 <label for="name">Name</label>
                                 <input type="text" class="form-control mb-3" id="name" name="name"
@@ -51,7 +51,7 @@
                             </div>
                         @endif
 
-                        @if (isset($districts))
+                        @if (isset($district))
                         <div class="form-group">
                             <label for="division_id">Division</label>
                             <select class="form-select form-control mb-3" name="division_id" id="division_id">
@@ -75,7 +75,7 @@
                         @endif
 
 
-                        @if (isset($districts))
+                        @if (isset($district))
                             <button type="submit" class="btn btn-primary">Update</button>
                         @else
                             <button type="submit" class="btn btn-primary">Submit</button>

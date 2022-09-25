@@ -37,11 +37,11 @@
                             </div>
                         @endif
 
-                        @if (isset($divisions))
+                        @if (isset($division))
                             <div class="form-group">
                                 <label for="name">Name</label>
                                 <input type="text" class="form-control mb-3" id="name" name="name"
-                                    value="{{ $category->name }}">
+                                    value="{{ $division->name }}">
                             </div>
                         @else
                             <div class="form-group">
@@ -52,7 +52,7 @@
                         @endif
 
 
-                        @if (isset($divisions))
+                        @if (isset($division))
                             <button type="submit" class="btn btn-primary">Update</button>
                         @else
                             <button type="submit" class="btn btn-primary">Submit</button>
