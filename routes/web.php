@@ -8,8 +8,8 @@ use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\ReviewerController;
 use App\Http\Controllers\SubCategoryController;
 use App\Http\Controllers\DivisionController;
-
-
+use App\Http\Controllers\ThanaController;
+use App\Models\Thana;
 
 Route::get('/', [HomepageController::class, 'index'])
     ->name('homepage');
@@ -31,3 +31,7 @@ Route::resource('divisions',DivisionController::class)
 
 Route::resource('districts',DistrictController::class)
     ->except('show');
+Route::resource('thanas',ThanaController::class)
+    ->except('show');
+
+
