@@ -23,7 +23,7 @@
                             <tr>
                                 <td>{{ $loop->iteration}}</td>
                                 <td>{{ $district->name }}</td>
-                                <td>{{ $district->division_id }}</td>
+                                <td>{{ $district->division->name }}</td>
                                 <td>
                                     <a href="{{ route('districts.edit', $district->id) }}">Edit</a>
 

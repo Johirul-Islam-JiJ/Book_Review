@@ -48,18 +48,28 @@ class ThanaController extends Controller
 
     public function edit(Thana $thana)
     {
-        //
+        $divisions = Division::orderBy('name', 'asc')->get();
+        $districts = District::orderBy('name', 'asc')->get();
+        return view('thanas.edit', compact('thana','districts','divisions' ));
     }
 
 
     public function update(Request $request, Thana $thana)
     {
-        //
+        $valid = $request->validate([
+            'name' =>['required','string','max:255','min:3'],
+            'division_id' =>['required'],
+            'district_id' =>['required'],
+        ]);
+
+        if($thana->update($valid))
+            return redirect()->route('thanas.index');
     }
 
 
     public function destroy(Thana $thana)
     {
-        //
+        if ($thana->delete())
+            return redirect()->route('thanas.index');
     }
 }
